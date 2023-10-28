@@ -11,12 +11,12 @@ fetch("kursus.json")
     });
   });
 
-const latarbelakang = document.querySelector("#latar-belakang");
+const latar= document.querySelector("#latar");
 fetch("kursus.json")
   .then((response) => response.json())
   .then((data) => {
     data.forEach((post) => {
-      latarbelakang.insertAdjacentHTML(
+      latar.insertAdjacentHTML(
         "beforeend",
         `<p style="text-align: justify;">${post.latar}
       </p>`
